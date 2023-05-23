@@ -1,0 +1,17 @@
+<div [hidden]="!submited" *ngIf="submited" class="signup-alert-container" [style]="submited ?'background-color:#b3f3b3; border:3px solid green;':'background-color:#f76e6e border:3px solid red'">
+    <p  >User Created Successfully!✌</p>
+    <!-- <p>User Creation Failder❌</p> -->
+</div>
+<div class="main-container">
+    <div class="sub-main-container">
+        <!-- Img banner -->
+        <h1 class="sub-main-container-header">Signup To Your Account</h1>
+        <img src="../../../assets/images/signup.svg" alt="Signup-Banner" class="sub-main-container-banner" height="210" width="350">
+        <form class="sub-main-field-container" #userForm="ngForm">
+            <input type="text" required [(ngModel)]="name" name="name" id="name" class="sub-main-inputField" placeholder="Username">
+            <input type="email" required [(ngModel)]="email" name="email" id="email" class="sub-main-inputField" placeholder="Email">
+            <input type="password" required [(ngModel)]="password" name="password" id="password" class="sub-main-inputField" placeholder="Password" [minLength]="8" [maxlength]="18">
+            <button type="submit" (click)="onSubmit()" class="sub-main-container-btn">Sign-Up</button>
+        </form>
+    </div>
+</div>

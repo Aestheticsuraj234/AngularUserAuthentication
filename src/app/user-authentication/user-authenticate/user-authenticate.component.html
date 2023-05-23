@@ -1,0 +1,12 @@
+<div class="main-container">
+    <div class="sub-main-container">
+        <!-- Img banner -->
+        <h1 class="sub-main-container-header">Login To Your Account</h1>
+        <img src="../../../assets/images/login.svg" alt="Signup-Banner" class="sub-main-container-banner" height="210" width="350">
+        <form  class="sub-main-field-container" #userForm="ngForm">
+            <input type="email" required [(ngModel)]="email" name="email" id="email" class="sub-main-inputField" placeholder="Email">
+            <input type="password" required [(ngModel)]="password" name="password" id="password" class="sub-main-inputField" placeholder="Password" [minLength]="8" [maxlength]="18">
+            <button type="submit" (click)="onLogin()" class="sub-main-container-btn">Login</button>
+        </form>
+    </div>
+</div>
